@@ -1,0 +1,516 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sugar Baby Potty Seat - Toilet Training Jadi Mudah & Menyenangkan</title>
+    <meta name="description" content="Bantu si kecil mandiri dengan Sugar Baby Potty Seat. Aman, nyaman, dan higienis. Solusi toilet training terbaik untuk orang tua cerdas.">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet">
+
+    <style>
+        /* CSS Reset and Basic Setup */
+        :root {
+            --primary-color: #4DB6AC; /* Soft Teal/Mint */
+            --light-bg: #F8F9FA;
+            --white-bg: #FFFFFF;
+            --text-primary: #333333;
+            --text-secondary: #6c757d;
+            --font-family: 'Nunito', sans-serif;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: var(--font-family);
+            background-color: var(--light-bg);
+            color: var(--text-primary);
+            line-height: 1.7;
+            padding-bottom: 90px; /* Space for sticky banner on mobile */
+        }
+
+        /* Utility Classes */
+        .container {
+            max-width: 960px;
+            margin: 0 auto;
+            padding: 0 1.5rem;
+        }
+
+        .cta-button {
+            display: inline-block;
+            background-color: var(--primary-color);
+            color: var(--white-bg);
+            font-weight: 700;
+            font-size: 1.1rem;
+            padding: 15px 30px;
+            text-decoration: none;
+            border-radius: 50px; /* Rounded button for friendly look */
+            text-align: center;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            border: none;
+            cursor: pointer;
+            box-shadow: 0 4px 15px rgba(77, 182, 172, 0.3);
+        }
+
+        .cta-button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 7px 20px rgba(77, 182, 172, 0.4);
+        }
+        
+        /* Animation on Scroll */
+        .animate-on-scroll {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+        }
+
+        .animate-on-scroll.is-visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* Header / Hero Section */
+        .hero {
+            background-color: var(--white-bg);
+            padding: 4rem 0;
+            text-align: center;
+        }
+
+        .hero h1 {
+            font-size: 2.3rem;
+            font-weight: 800;
+            margin-bottom: 0.5rem;
+            line-height: 1.2;
+            color: var(--text-primary);
+        }
+
+        .hero .tagline {
+            font-size: 1.2rem;
+            color: var(--text-secondary);
+            margin-bottom: 2rem;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .hero img.product-showcase {
+            max-width: 100%;
+            width: 450px;
+            height: auto;
+            border-radius: 16px;
+            margin-bottom: 2rem;
+        }
+
+        /* Section Styling */
+        section {
+            padding: 4rem 0;
+        }
+        
+        .section-title {
+            text-align: center;
+            font-size: 2rem;
+            font-weight: 800;
+            margin-bottom: 1rem;
+        }
+        
+        .section-subtitle {
+            text-align: center;
+            color: var(--text-secondary);
+            max-width: 600px;
+            margin: 0 auto 3rem auto;
+        }
+
+        /* Benefits Section */
+        .benefits-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 2rem;
+        }
+
+        .benefit-card {
+            background-color: var(--white-bg);
+            padding: 2rem;
+            border-radius: 16px;
+            text-align: center;
+            box-shadow: 0 5px 25px rgba(0,0,0,0.05);
+            border: 1px solid #eee;
+        }
+
+        .benefit-card .icon {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+
+        .benefit-card h3 {
+            font-size: 1.3rem;
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+        }
+
+        /* Features/Gallery Section */
+        .features {
+            background-color: var(--white-bg);
+        }
+        .feature-content {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 2rem;
+        }
+        .feature-text {
+            text-align: center;
+        }
+        .feature-image img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 16px;
+        }
+
+        /* Testimonials Section */
+        .testimonials-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 1.5rem;
+        }
+        .testimonial-card {
+            background-color: var(--white-bg);
+            padding: 1.5rem;
+            border-radius: 16px;
+            border-left: 5px solid var(--primary-color);
+            box-shadow: 0 5px 25px rgba(0,0,0,0.05);
+        }
+        .testimonial-card p {
+            font-style: italic;
+            margin-bottom: 1rem;
+            color: var(--text-secondary);
+        }
+        .testimonial-card .author {
+            font-weight: bold;
+            color: var(--primary-color);
+        }
+
+        /* Urgency/CTA Section */
+        .urgency {
+            background: linear-gradient(180deg, var(--white-bg) 0%, var(--light-bg) 100%);
+            text-align: center;
+        }
+        .countdown-timer {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            margin: 2rem 0;
+        }
+        .timer-box {
+            background-color: var(--white-bg);
+            padding: 1rem;
+            border-radius: 8px;
+            min-width: 80px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+        }
+        .timer-box .time {
+            font-size: 2rem;
+            font-weight: 700;
+            color: var(--primary-color);
+        }
+        .timer-box .label {
+            font-size: 0.8rem;
+            color: var(--text-secondary);
+            text-transform: uppercase;
+        }
+        
+        .stock-counter {
+            margin-top: 1.5rem;
+            font-size: 1.1rem;
+        }
+        .stock-counter span {
+            color: var(--primary-color);
+            font-weight: bold;
+        }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            padding: 2rem 0;
+            margin-top: 2rem;
+            background-color: var(--white-bg);
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+        }
+        
+        /* Sticky Bottom Banner */
+        .sticky-banner {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            background-color: var(--white-bg);
+            border-top: 2px solid var(--primary-color);
+            padding: 10px 15px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            z-index: 1000;
+            box-shadow: 0 -5px 15px rgba(0,0,0,0.08);
+        }
+        .price-info .normal-price {
+            text-decoration: line-through;
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+        }
+        .price-info .selling-price {
+            font-size: 1.3rem;
+            font-weight: 700;
+            color: var(--primary-color);
+        }
+        .sticky-banner .cta-button {
+            padding: 10px 20px;
+            font-size: 1rem;
+            border-radius: 30px;
+        }
+
+        /* Responsive Design */
+        @media (min-width: 768px) {
+            body {
+                padding-bottom: 0;
+            }
+
+            .hero h1 {
+                font-size: 3rem;
+            }
+
+            .benefits-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .feature-content {
+                flex-direction: row;
+                gap: 3rem;
+                text-align: left;
+            }
+            .feature-content.reverse {
+                flex-direction: row-reverse;
+            }
+            .feature-text, .feature-image {
+                flex: 1;
+            }
+
+            .testimonials-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            
+            .sticky-banner {
+                display: none;
+            }
+        }
+
+    </style>
+</head>
+<body>
+
+    <header class="hero">
+        <div class="container">
+            <h1 class="animate-on-scroll">Langkah Pertama si Kecil Menuju Kemandirian</h1>
+            <p class="tagline animate-on-scroll">Toilet Training Jadi Mudah, Aman, dan Menyenangkan dengan Sugar Baby Potty Seat!</p>
+            <img src="https://down-id.img.susercontent.com/file/6834a5a3485a1796c001169b4bc85374.webp" alt="Sugar Baby Potty Seat" class="product-showcase animate-on-scroll">
+            <a href="https://emma.orderonline.id/seat-train-toilet" target="_self" class="cta-button animate-on-scroll">Bantu si Kecil Mandiri Sekarang</a>
+        </div>
+    </header>
+
+    <main>
+        <section id="benefits">
+            <div class="container">
+                <h2 class="section-title animate-on-scroll">Pilihan Terbaik Para Orang Tua Cerdas</h2>
+                <p class="section-subtitle animate-on-scroll">Didesain khusus untuk kenyamanan dan keamanan si kecil, sekaligus memberikan ketenangan bagi Ayah dan Bunda.</p>
+                <div class="benefits-grid">
+                    <div class="benefit-card animate-on-scroll">
+                        <div class="icon">🛡️</div>
+                        <h3>Aman & Nyaman untuk si Kecil</h3>
+                        <p>Dengan bantalan empuk, pegangan tangan yang kokoh, dan alas anti-slip, si kecil akan merasa aman dan nyaman saat menggunakannya.</p>
+                    </div>
+                    <div class="benefit-card animate-on-scroll">
+                        <div class="icon">✨</div>
+                        <h3>Desain Higienis & Praktis</h3>
+                        <p>Dilengkapi *splash guard* untuk mencegah cipratan dan material yang mudah dibersihkan. Toilet training jadi lebih higienis!</p>
+                    </div>
+                    <div class="benefit-card animate-on-scroll">
+                        <div class="icon">👶</div>
+                        <h3>Meningkatkan Kepercayaan Diri Anak</h3>
+                        <p>Desain yang lucu dan ukuran yang pas membuat anak lebih bersemangat dan percaya diri untuk belajar menggunakan toilet sendiri.</p>
+                    </div>
+                    <div class="benefit-card animate-on-scroll">
+                        <div class="icon">👍</div>
+                        <h3>Cocok untuk Semua Jenis Toilet</h3>
+                        <p>Desain universalnya memastikan potty seat ini dapat dipasang dengan mudah dan pas di hampir semua model toilet dewasa standar.</p>
+                    </div>
+                </div>
+            </div>
+        section>
+
+        <section class="features">
+            <div class="container">
+                <div class="feature-content">
+                    <div class="feature-image animate-on-scroll">
+                        <img src="https://down-id.img.susercontent.com/file/177485effb7f3a482438420160ace211.webp" alt="Detail Sugar Baby Potty Seat">
+                    </div>
+                    <div class="feature-text animate-on-scroll">
+                        <h2 class="section-title" style="text-align: left;">Kualitas Premium untuk Buah Hati Tercinta</h2>
+                        <p>Kami hanya menggunakan material PP berkualitas tinggi yang bebas dari zat berbahaya, kuat, dan tahan lama. Bantalan PU-nya yang empuk dapat dilepas-pasang untuk memudahkan pembersihan. Investasi terbaik untuk kenyamanan si kecil.</p>
+                        <br>
+                        <a href="https://emma.orderonline.id/seat-train-toilet" target="_self" class="cta-button">Pesan Sekarang</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="testimonials">
+            <div class="container">
+                <h2 class="section-title animate-on-scroll">Kata Para Bunda Hebat</h2>
+                <p class="section-subtitle animate-on-scroll">Jangan hanya percaya kata kami, lihat apa kata mereka yang sudah membuktikannya.</p>
+                <div class="testimonials-grid">
+                    <div class="testimonial-card animate-on-scroll">
+                        <p>"Anakku jadi nggak takut lagi ke toilet. Bahannya empuk, dia suka banget duduk di sini! Recommended!"</p>
+                        <div class="author">~ Bunda Riska, Jakarta</div>
+                    </div>
+                    <div class="testimonial-card animate-on-scroll">
+                        <p>"Pemasangannya gampang dan ada anti-slipnya, jadi aman nggak goyang-goyang. Kualitasnya oke punya."</p>
+                        <div class="author">~ Ayah Doni, Surabaya</div>
+                    </div>
+                    <div class="testimonial-card animate-on-scroll">
+                        <p>"Ngebantu banget, toilet jadi nggak berantakan lagi berkat splash guard-nya. Membersihkannya juga gampang."</p>
+                        <div class="author">~ Bunda Fitri, Bekasi</div>
+                    </div>
+                    <div class="testimonial-card animate-on-scroll">
+                        <p>"Worth every penny! Kualitasnya premium, beda jauh sama yang murahan di pasaran. Anakku jadi cepat bisa toilet training."</p>
+                        <div class="author">~ Bunda Maya, Tangerang</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="order" class="urgency">
+            <div class="container">
+                <h2 class="section-title animate-on-scroll">Promo Spesial Bunda Cerdas!</h2>
+                <p class="section-subtitle animate-on-scroll">Dapatkan harga istimewa untuk waktu terbatas. Berikan yang terbaik untuk si kecil hari ini juga.</p>
+                
+                <div class="countdown-timer animate-on-scroll">
+                    <div class="timer-box"><div id="hours" class="time">23</div><div class="label">Jam</div></div>
+                    <div class="timer-box"><div id="minutes" class="time">59</div><div class="label">Menit</div></div>
+                    <div class="timer-box"><div id="seconds" class="time">59</div><div class="label">Detik</div></div>
+                </div>
+
+                <div class="price-display animate-on-scroll" style="margin: 2rem 0;">
+                    <p style="color: var(--text-secondary);">Harga Normal: <span style="text-decoration: line-through;">Rp 292.500</span></p>
+                    <p style="font-size: 1.2rem;">Harga Promo Hari Ini:</p>
+                    <h3 style="font-family: var(--font-family); font-weight: 800; font-size: 2.5rem; color: var(--primary-color); margin-top: 0.5rem;">Rp 195.000</h3>
+                </div>
+
+                <a href="https://emma.orderonline.id/seat-train-toilet" target="_self" class="cta-button animate-on-scroll" style="padding: 20px 40px; font-size: 1.2rem;">YA, SAYA MAU POTTY SEAT-NYA!</a>
+                
+                <p class="stock-counter animate-on-scroll">
+                    💖 Stok promo terbatas! Sudah <span id="stock-count">137</span> Bunda cerdas yang membeli hari ini.
+                </p>
+            </div>
+        </section>
+
+    </main>
+    
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Sugar Baby Indonesia. All Rights Reserved.</p>
+        </div>
+    </footer>
+    
+    <div class="sticky-banner">
+        <div class="price-info">
+            <div class="normal-price">Rp 292.500</div>
+            <div class="selling-price">Rp 195.000</div>
+        </div>
+        <a href="https://emma.orderonline.id/seat-train-toilet" target="_self" class="cta-button">Pesan Sekarang</a>
+    </div>
+
+    <script>
+    document.addEventListener('DOMContentLoaded', function() {
+        
+        // --- ANIMATION ON SCROLL ---
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('is-visible');
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, {
+            threshold: 0.1
+        });
+
+        const elementsToAnimate = document.querySelectorAll('.animate-on-scroll');
+        elementsToAnimate.forEach(el => observer.observe(el));
+
+        // --- COUNTDOWN TIMER ---
+        function startCountdown() {
+            const countdownElements = {
+                hours: document.getElementById('hours'),
+                minutes: document.getElementById('minutes'),
+                seconds: document.getElementById('seconds')
+            };
+
+            let now = new Date();
+            let endOfDay = new Date(now.getFullYear(), now.getMonth(), now.getDate(), 23, 59, 59, 999);
+            let timeLeft = endOfDay.getTime() - now.getTime();
+
+            const interval = setInterval(() => {
+                timeLeft -= 1000;
+                
+                if (timeLeft < 0) {
+                    clearInterval(interval);
+                    countdownElements.hours.textContent = '00';
+                    countdownElements.minutes.textContent = '00';
+                    countdownElements.seconds.textContent = '00';
+                    return;
+                }
+
+                let hours = Math.floor(timeLeft / (1000 * 60 * 60));
+                let minutes = Math.floor((timeLeft % (1000 * 60 * 60)) / (1000 * 60));
+                let seconds = Math.floor((timeLeft % (1000 * 60)) / 1000);
+
+                if(countdownElements.hours) countdownElements.hours.textContent = hours.toString().padStart(2, '0');
+                if(countdownElements.minutes) countdownElements.minutes.textContent = minutes.toString().padStart(2, '0');
+                if(countdownElements.seconds) countdownElements.seconds.textContent = seconds.toString().padStart(2, '0');
+            }, 1000);
+        }
+        
+        startCountdown();
+
+        // --- DYNAMIC STOCK COUNTER ---
+        function dynamicStockCounter() {
+            const stockElement = document.getElementById('stock-count');
+            if (!stockElement) return;
+
+            let stockCount = parseInt(stockElement.textContent);
+
+            setInterval(() => {
+                const randomIncrement = Math.floor(Math.random() * 3) + 1; // 1, 2, or 3
+                stockCount += randomIncrement;
+                stockElement.textContent = stockCount;
+            }, 15000); // every 15 seconds
+        }
+
+        dynamicStockCounter();
+
+    });
+    </script>
+
+</body>
+</html>
